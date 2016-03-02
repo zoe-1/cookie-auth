@@ -21,7 +21,7 @@ const expect = Code.expect;
 const it = lab.test;
 
 
-describe('/auth-cookie', () => {
+describe('/resources', () => {
 
     it('ensures /auth works', (done) => {
 
