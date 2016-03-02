@@ -7,9 +7,9 @@ Should help those trying to configure a project to use hapi-auth-cookie with glu
 
 ### glue 
  * project uses [glue](https://github.com/hapijs/glue) to compose the server. 
- * glue uses a JSON object call a manifest document. The manifest declares all plugins to 
-   be loaded when the server starts (composed). The manifest document used to compose each
-   the server for tests is declared at the bottom of the tests file. 
+ * glue uses a JSON object called a manifest document. The manifest declares all plugins to 
+   be loaded when the server starts (composes). The manifest document used to compose
+   the server for tests is declared at the bottom of each test file. 
 
 ### register auth plugin
  * ./lib/cookie-auth.js
@@ -25,11 +25,12 @@ All sample code has test coverage.
 
 ### routes
  * GET /auth 
-   proves hapi-auth-cookie is works. But, turns redirect off.  
+   proves hapi-auth-cookie is working. 
+   But, turns redirect off.  
 
  * GET /restricted  
    user must be authenticated to access restricted route.  
-   Note: no scopes apply to authorization yet.
+   Note: no scopes configured yet.
 
  * POST /login  
    resource point which upon successful authorization returns  
@@ -37,8 +38,17 @@ All sample code has test coverage.
    in the response headers.
    - see ./test/resources.js and test/cookie-auth.js
 
+### dependencies after example
+project uses glue to load plugins and server.dependency(dependency, after) logic
+to ensure depencies are loaded before a plugin loads that depends on them.
+server.dependency('hapi-auth-cookie', internals.after);
+  * examples of dependencies after usage:
+    - ./lib/cookie-auth.js
+    - ./lib/resources.js
 
 ### To inspect code:
-git clone uri-to-repo 
-npm install
-npm test
+`git clone https://github.com/zoe-1/cookie-auth` <br/> 
+`npm install`<br/>
+`npm test`<br/>
+Read the tests code, that is where all the action is at.
+
