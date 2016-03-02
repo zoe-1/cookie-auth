@@ -3,6 +3,7 @@
 Sample project configured to use hapi-auth-cookie. Made in preparation to [update](https://github.com/hapijs/university/issues/193) 
 [hapijs/university assignment7](https://github.com/hapijs/university/blob/master/guides/contents.md) to hapi v13.x.x, hapi-auth-cookie v6.x.x using ES6 code. 
 Should help those trying to configure a project to use hapi-auth-cookie with glue composing the server.
+Project implements most of the hapi-cookie-auth [example](https://github.com/hapijs/hapi-auth-cookie/blob/master/example/index.js) application, but adds glue.
 
 
 ### glue 
