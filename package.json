@@ -1,0 +1,42 @@
+{
+  "name": "cookie-auth",
+  "version": "0.0.1",
+  "description": "sample hapi-auth-cookie project",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zoe-1/cookie-auth.git"
+  },
+  "keywords": [
+    "hapi",
+    "auth",
+    "cookie",
+    "example",
+    "ES6"
+  ],
+  "engines": {
+      "node": ">=4.0.0"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/zoe-1/cookie-auth/issues"
+  },
+  "homepage": "https://github.com/zoe-1/cookie-auth",
+  "dependencies": {
+    "async": "^1.5.2",
+    "boom": "3.x.x",
+    "glue": "3.x.x",
+    "hapi": "13.x.x",
+    "hapi-auth-cookie": "6.x.x",
+    "hoek": "3.x.x"
+  },
+  "scripts": {
+    "test": "lab -a code -t 100 -L -v",
+    "test-cov-html": "lab -a code -L -r html -o coverage.html",
+    "start": "node lib/start.js"
+  },
+  "devDependencies": {
+    "code": "2.x.x",
+    "lab": "9.x.x"
+  }
+}
